@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HTML</title>
+  </head>
+  <body>
+    <h1 style="text-align:center;color:blue;"><b>My website</b></h1>
+    <table style="width:100%">
+        <td><img src="348B850600000578-3605456-image-m-32_1464040491071.jpg" alt="My personal photo"></td>
+        <td>
+          <h2 style="color:blue;"><b>About me</b></h2>
+            <p style="font-family:sans-serif;text-align:justify;font-size:25px;">Lorem Ipsum is simply dummy
+              text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+               text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+               a type specimen book. It has survived not only five centuries, but also the leap into electronic
+                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
+                 Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                 like Aldus PageMaker including versions of Lorem Ipsum. <a href="https://www.lipsum.com/">Click to know more about me</a></p>
+        </td>
+    </table>
+    <h2 style="color:blue;">Things i love</h2>
+      <ol>
+        <li>I love reading</li>
+        <li>I love praying</li>
+        <li>I love washing</li>
+        <li>I love coding</li>
+      </ol>
+      <p style="color:blue;"><em>If you like this rate me, but first tell me who you are:</em></p>
+      <form  action="index.html" method="post">
+        <p>What is your name?</p>
+        <input name="firstname" type="text">
+        <br><br>
+        <input type="radio" name="rate" value="Good" checked>Good<br>
+        <input type="radio" name="rate" value="Excellent">Excellent<br>
+        <input type="radio" name="rate" value="Bad">Bad <br>
+        <input type="submit" name="" value="submit">
+      </form><br><br>
+        <!-- Start of Canvas -->
+      <p>An example of a canvas:</p>
+      <canvas id="Canvas1" width="500" height="200" style="border:3px solid grey;"></canvas>
+      <script>
+        var c = document.getElementById("Canvas1");
+        var ctx = c.getContext("2d");
+        ctx.font = "50px sans-serif";
+        ctx.fillStyle = "blue";
+        ctx.strokeText("I love God",80,100);
+        </script>
+          <!-- End of Canvas -->
+        <!-- Start of SVG goes here. x1&y1 represents the start of line and  x2&y2 represents the end of line -->
+        <p>An example of SVG</p>
+        <svg height="100" width="200">
+          <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(0,0,255);stroke-width:2" />
+        </svg>
+        <!-- End of SVG -->
+        <!-- Start of Googlemaps -->
+
+        <div id="map" style="width:100%;height:500px"></div>
+     <p>Google Map</p>
+       <script>
+         function myMap() {
+           var myCenter = new google.maps.LatLng(1.2827,36.7523);
+           var mapCanvas = document.getElementById("map");
+           var mapOptions = {center: myCenter, zoom: 5};
+           var map = new google.maps.Map(mapCanvas, mapOptions);
+           var marker = new google.maps.Marker({position:myCenter});
+           marker.setMap(map);
+           }
+        </script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0Cn1ZDq6iocHRvF-tgPDG_8LACceNQhM&callback=myMap"></script>
+
+        <!-- End of Googlemaps -->
+  </body>
+</html>
