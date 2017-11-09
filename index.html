@@ -4,58 +4,10 @@
     <meta charset="utf-8">
     <title>HTML</title>
   </head>
-  <body>
-    <h1 style="text-align:center;color:blue;"><b>My website</b></h1>
-    <table style="width:100%">
-        <td><img src="348B850600000578-3605456-image-m-32_1464040491071.jpg" alt="My personal photo"></td>
-        <td>
-          <h2 style="color:blue;"><b>About me</b></h2>
-            <p style="font-family:sans-serif;text-align:justify;font-size:25px;">Lorem Ipsum is simply dummy
-              text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-               text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
-               a type specimen book. It has survived not only five centuries, but also the leap into electronic
-                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-                 Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
-                 like Aldus PageMaker including versions of Lorem Ipsum. <a href="https://www.lipsum.com/">Click to know more about me</a></p>
-        </td>
-    </table>
-    <h2 style="color:blue;">Things i love</h2>
-      <ol>
-        <li>I love reading</li>
-        <li>I love praying</li>
-        <li>I love washing</li>
-        <li>I love coding</li>
-      </ol>
-      <p style="color:blue;"><em>If you like this rate me, but first tell me who you are:</em></p>
-      <form  action="index.html" method="post">
-        <p>What is your name?</p>
-        <input name="firstname" type="text">
-        <br><br>
-        <input type="radio" name="rate" value="Good" checked>Good<br>
-        <input type="radio" name="rate" value="Excellent">Excellent<br>
-        <input type="radio" name="rate" value="Bad">Bad <br>
-        <input type="submit" name="" value="submit">
-      </form><br><br>
-        <!-- Start of Canvas -->
-      <p>An example of a canvas:</p>
-      <canvas id="Canvas1" width="500" height="200" style="border:3px solid grey;"></canvas>
-      <script>
-        var c = document.getElementById("Canvas1");
-        var ctx = c.getContext("2d");
-        ctx.font = "50px sans-serif";
-        ctx.fillStyle = "blue";
-        ctx.strokeText("I love God",80,100);
-        </script>
-          <!-- End of Canvas -->
-        <!-- Start of SVG goes here. x1&y1 represents the start of line and  x2&y2 represents the end of line -->
-        <p>An example of SVG</p>
-        <svg height="100" width="200">
-          <line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(0,0,255);stroke-width:2" />
-        </svg>
-        <!-- End of SVG -->
-        <!-- Start of Googlemaps -->
-
-        <div id="map" style="width:100%;height:500px"></div>
+  <body style="background-color:#1BA8A3;">
+      <h1 style="text-align:center;font-family:Sans-serif"><b>HTML1</b></h1>
+    <!-- Start of Googlemaps -->
+    <div id="map" style="width:100%;height:500px"></div>
      <p>Google Map</p>
        <script>
          function myMap() {
@@ -71,5 +23,102 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0Cn1ZDq6iocHRvF-tgPDG_8LACceNQhM&callback=myMap"></script>
 
         <!-- End of Googlemaps -->
+
+        <table>
+          <tr>
+            <td>
+            <h2>Job Opening for Software Enginnering</h2>
+            <p>To apply for the below opening create an account and fill in the details provided in the form.</p>
+            <ul>
+              <li>Degree in Computer Science</li>
+              <li>B+ in kcse.</li>
+              <li>A dedicated person</li>
+            </ul>
+            <form class="" action="index.html" method="post" >
+              Enter your full name:<br>
+              <input type="text" name="fullname" style="font-size:20px;"><br>
+               Enter your username:<br>
+              <input type="text" name="username" style="font-size:20px;"><br>
+              Enter your email:<br>
+              <input type="email" name="email" style="font-size:20px;"> <br>
+              Enter your contacts: <br>
+              <input type="number" name="contacts" style="font-size:20px;"> <br>
+               Enter your Password:<br>
+              <input type="password" name="psw" style="font-size:20px;"><br>
+              Select your gender:<br>
+              <input type="radio" name="gender" value="male" > Male<br>
+              <input type="radio" name="gender" value="female"> Female<br>
+              <input type="radio" name="gender" value="other" checked> Other <br>
+              What is your marital status:<br>
+              <input type="radio" name="status" value="single">Single<br>
+              <input type="radio" name="status" value="married" checked>Married<br>
+              <input type="radio" name="status" value="divorced">Divorced <br>
+              Date of Birth in the form YYMMDD:<br>
+              <input type="date" name="birthday" style="font-size:20px;"><br>
+              Tell me about yourself: <br>
+              <textarea name="message" style="width:200px; height:100px;"></textarea> <br>
+              Add a link to your personal website: <br>
+              <input type="url" name="portfolio" style="font-size:20px;"> <br>
+              Upload a file of your choice: <br>
+              <input type="file" name="upload" style="font-size:15px;"> <br> <br>
+              <button type="button" style="font-size:20px;" onclick="alert('We have received your application successfully wait for feedback')">Submit</button>
+            </form>
+          </td>
+           <td>
+            <h2>Canvas</h2>
+            <canvas id="Canvas" width="600" height="800" style="border:4px dashed grey;">
+             <script>
+                window.onload = function() {
+                var canvas = document.getElementById("Canvas"); //this DOM method finds the canvas method.
+                var ctx = canvas.getContext("2d");// creates a drawing object
+
+                //draws text
+                ctx.font = "50px Sansserif";
+                ctx.textAlign= "center";
+                ctx.fillText("Welcome to This canvas",canvas.width/2, canvas.height/2);
+                //ends text
+
+                //start of image
+                var img = document.getElementById("image");
+                ctx.drawImage(img, 30, 30);
+                //emd of image
+                // Create gradient
+                var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+                grd.addColorStop(0,"red");
+                grd.addColorStop(0.6,"black");
+                // Fill with gradient
+                ctx.fillStyle = grd;
+                ctx.fillRect(50,50,150,80);
+                //draws a circle
+                ctx.beginPath();
+                ctx.arc(95,50,40,0,2*Math.PI);
+                //ends a circle
+                //draws a line
+                ctx.moveTo(0,0);
+                ctx.lineTo(300,100);
+                //ends a line
+                //this method actually draws the shape
+                ctx.stroke();
+              };
+
+              </script>
+
+            </td>
+            <td  style="border:4px dashed grey;">
+              <h3>SVG</h3>
+              <svg width="600" height="400">
+                <rect width="400" height="200" style="fill:#960C19 ;stroke-width:4;stroke:black" />
+              </svg>
+              <svg height="210" width="500">
+                <polygon points="200,10 250,190 160,210" style="fill:#960C19;stroke:black;stroke-width:4" />
+              </svg>
+              <img src="img\FleurDeLis.svg" alt="">
+
+            </td>
+          </tr>
+
+          <img style="display:none;"src="img\graphic-design.jpg" alt="" id="image">
+        </table>
+
   </body>
 </html>
