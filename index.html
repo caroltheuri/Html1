@@ -1,72 +1,79 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>HTML</title>
-  </head>
-  <body style="background-color:#1BA8A3;">
-      <h1 style="text-align:center;font-family:Sans-serif"><b>HTML1</b></h1>
-    <!-- Start of Googlemaps -->
-    <div id="map" style="width:100%;height:500px"></div>
-     <p>Google Map</p>
-       <script>
-         function myMap() {
-           var myCenter = new google.maps.LatLng(1.2827,36.7523);
-           var mapCanvas = document.getElementById("map");
-           var mapOptions = {center: myCenter, zoom: 5};
-           var map = new google.maps.Map(mapCanvas, mapOptions);
-           var marker = new google.maps.Marker({position:myCenter});
-           marker.setMap(map);
-           }
-        </script>
 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0Cn1ZDq6iocHRvF-tgPDG_8LACceNQhM&callback=myMap"></script>
+<head>
+  <meta charset="utf-8">
+  <title>HTML</title>
+</head>
 
-        <!-- End of Googlemaps -->
+<body style="background-color:#1BA8A3;">
+  <h1 style="text-align:center;font-family:Sans-serif"><b>HTML1</b></h1>
+  <!-- Start of Googlemaps -->
+  <div id="map" style="width:100%;height:500px"></div>
+  <p>Google Map</p>
+  <script>
+    function myMap() {
+      var myCenter = new google.maps.LatLng(1.2827, 36.7523);
+      var mapCanvas = document.getElementById("map");
+      var mapOptions = {
+        center: myCenter,
+        zoom: 5
+      };
+      var map = new google.maps.Map(mapCanvas, mapOptions);
+      var marker = new google.maps.Marker({
+        position: myCenter
+      });
+      marker.setMap(map);
+    }
+  </script>
 
-        <table>
-          <tr>
-            <td>
-            <h2>Job Opening for Software Enginnering</h2>
-            <p>To apply for the below opening create an account and fill in the details provided in the form.</p>
-            <ul>
-              <li>Degree in Computer Science</li>
-              <li>B+ in kcse.</li>
-              <li>A dedicated person</li>
-            </ul>
-            <form class="" action="index.html" method="post" >
-              Enter your full name:<br>
-              <input type="text" name="fullname" style="font-size:20px;"><br>
-               Enter your username:<br>
-              <input type="text" name="username" style="font-size:20px;"><br>
-              Enter your email:<br>
-              <input type="email" name="email" style="font-size:20px;"> <br>
-              Enter your contacts: <br>
-              <input type="number" name="contacts" style="font-size:20px;"> <br>
-               Enter your Password:<br>
-              <input type="password" name="psw" style="font-size:20px;"><br>
-              Select your gender:<br>
-              <input type="radio" name="gender" value="male" > Male<br>
-              <input type="radio" name="gender" value="female"> Female<br>
-              <input type="radio" name="gender" value="other" checked> Other <br>
-              What is your marital status:<br>
-              <input type="radio" name="status" value="single">Single<br>
-              <input type="radio" name="status" value="married" checked>Married<br>
-              <input type="radio" name="status" value="divorced">Divorced <br>
-              Date of Birth in the form YYMMDD:<br>
-              <input type="date" name="birthday" style="font-size:20px;"><br>
-              Tell me about yourself: <br>
-              <textarea name="message" style="width:200px; height:100px;"></textarea> <br>
-              Add a link to your personal website: <br>
-              <input type="url" name="portfolio" style="font-size:20px;"> <br>
-              Upload a file of your choice: <br>
-              <input type="file" name="upload" style="font-size:15px;"> <br> <br>
-              <button type="button" style="font-size:20px;" onclick="alert('We have received your application successfully wait for feedback')">Submit</button>
-            </form>
-          </td>
-           <td>
-            <h2>Canvas</h2>
-            <canvas id="Canvas" width="600" height="800" style="border:4px dashed grey;">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0Cn1ZDq6iocHRvF-tgPDG_8LACceNQhM&callback=myMap"></script>
+
+  <!-- End of Googlemaps -->
+
+  <table>
+    <tr>
+      <td>
+        <h2>Job Opening for Software Enginnering</h2>
+        <p>To apply for the below opening create an account and fill in the details provided in the form.</p>
+        <ul>
+          <li>Degree in Computer Science</li>
+          <li>B+ in kcse.</li>
+          <li>A dedicated person</li>
+        </ul>
+        <form class="" action="index.html" method="post">
+          Enter your full name:<br>
+          <input type="text" name="fullname" style="font-size:20px;"><br>
+          Enter your username:<br>
+          <input type="text" name="username" style="font-size:20px;"><br>
+          Enter your email:<br>
+          <input type="email" name="email" style="font-size:20px;"> <br>
+          Enter your contacts: <br>
+          <input type="number" name="contacts" style="font-size:20px;"> <br>
+          Enter your Password:<br>
+          <input type="password" name="psw" style="font-size:20px;"><br>
+          Select your gender:<br>
+          <input type="radio" name="gender" value="male"> Male<br>
+          <input type="radio" name="gender" value="female"> Female<br>
+          <input type="radio" name="gender" value="other" checked> Other <br>
+          What is your marital status:<br>
+          <input type="radio" name="status" value="single">Single<br>
+          <input type="radio" name="status" value="married" checked>Married<br>
+          <input type="radio" name="status" value="divorced">Divorced <br>
+          Date of Birth in the form YYMMDD:<br>
+          <input type="date" name="birthday" style="font-size:20px;"><br>
+          Tell me about yourself: <br>
+          <textarea name="message" style="width:200px; height:100px;"></textarea> <br>
+          Add a link to your personal website: <br>
+          <input type="url" name="portfolio" style="font-size:20px;"> <br>
+          Upload a file of your choice: <br>
+          <input type="file" name="upload" style="font-size:15px;"> <br> <br>
+          <button type="button" style="font-size:20px;" onclick="alert('We have received your application successfully wait for feedback')">Submit</button>
+        </form>
+      </td>
+      <td>
+        <h2>Canvas</h2>
+        <canvas id="Canvas" width="600" height="800" style="border:4px dashed grey;">
              <script>
                 window.onload = function() {
                 var canvas = document.getElementById("Canvas"); //this DOM method finds the canvas method.
